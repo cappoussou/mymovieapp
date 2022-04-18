@@ -1,38 +1,104 @@
 .App {
   text-align: center;
+  
+   
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.AddMovie {
+  text-align: center;
+  margin-top: 20px;
+}
+.AddMovie input {
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-top: 10px;
+}
+.AddMovie button {
+  width: 100px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-top: 10px;
+}
+.AddMovie button:hover {
+  background-color: rgb(196, 96, 94);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.MovieContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 20px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  border-radius: 5px;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.MovieContainer :hover {
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.MoviesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  border-radius: 5px;
+  
+}
+.MovieCard {
+  width: 200px;
+  height: 360px;
+  margin: 10px;
+  margin-top: 50px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+background-color: aliceblue;
+
+
+
+}
+
+.MovieCard:hover {
+  box-shadow: 0px 0px 10px 0px rgba(248, 141, 141, 0.75);
+  animation: shake 0.5s;
+ 
+  
+}
+
+
+.addnewmovie  { 
+
+  width: 200px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(255, 82, 82);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.search {
+
+  width: 200px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(255, 82, 82);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.app {
+  background-image: url("https://wallpaperaccess.com/full/3968079.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 120vh;
+  width: 100vw;
+  
 }
