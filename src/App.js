@@ -1,26 +1,13 @@
 import React, {useState} from 'react'
 import './App.css';
-import MovieList from './Component/MovieList'
-import Asabove from './Images/As Above So Below.jpeg'
-import BlackWidow from './Images/Black Widow.jpeg'
-import Captain from './Images/Captain Marvel.jpeg'
-import MrClean from './Images/Mr Clean.jpeg'
-import Robocop from './Images/Robocop.jpeg'
-import TheAssassin from './Images/theAssassin.jpeg'
+import MovieList from './Component/MovieList';
 import AddMovie from './Component/AddMovie';
 import MoviesContainer from './Component/MoviesContainer';
-import Movie from './Component/Movie';
- import { Routes,Route } from 'react-router-dom';
+import {movie}  from './Component/MovieData';
+
+
 const App = () => {
-const [movies,setMovies] = useState([
-  //Movies array
-  {id:1, name:'As Above So Below',Description:'m1 desc', image: Asabove ,rate:4,link:"https://www.youtube.com/watch?v=Fq358xHbzN4"},
-  {id:2, name:'Black Widow',Description:'m2 desc', image: BlackWidow,rate:5 ,link:"https://www.youtube.com/watch?v=Fq358xHbzN4"},
-  {id:3, name:'Captain Marvel',Description:'m3 desc',image:Captain ,rate:3 ,link:"https://www.youtube.com/watch?v=Fq358xHbzN4"},
-  {id:4, name:'Mr Clean',Description:'m4 desc', image:MrClean ,rate:2 ,link:"https://www.youtube.com/watch?v=Fq358xHbzN4"},
-  {id:5, name:'Robocop',Description:'m5 desc', image:Robocop ,rate:5 ,link:"https://www.youtube.com/watch?v=Fq358xHbzN4"},
-  {id:6, name:'The Assassin',Description:'m6 desc', image:TheAssassin ,rate:1,link:"https://www.youtube.com/watch?v=Fq358xHbzN4"},
-]);
+const [movies,setMovies] = useState(movie);
 
 const [test, setTest]=useState(true);
 const [testSearch, setTestSearch]=useState(false);
@@ -45,18 +32,10 @@ const [searchList, setSearchList]=useState(movies);
   }
   return (
     <div className='app' >
-      {test? <div className="App">
-        <MovieList movies={!testSearch? movies: searchList} 
+      {test? <div className="App"><MovieList movies={!testSearch? movies: searchList} 
       searchByName={searchByName} searchByRate={searchByRate}/>
-      <MoviesContainer movies={!testSearch? movies: searchList} handleFunction={handleFunction}/>
-       </div>
+      <MoviesContainer movies={!testSearch? movies: searchList} handleFunction={handleFunction}/> </div>
       :<AddMovie addMovie={addMovie} handleFunction={handleFunction}/>}
-
-
-
-
-
- 
     </div>
   )}
 export default App;
