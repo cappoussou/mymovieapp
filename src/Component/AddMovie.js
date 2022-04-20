@@ -9,8 +9,7 @@ function AddMovie ({addMovie, handleFunction}) {
         <form>
             <div>
             <label>Movie Name:</label>
-            <input type="text" name="name" placeholder="Write the movie name" required onChange={inputFunction} 
-            onChange={inputFunction}/>
+            <input type="text" name="name" placeholder="Write the movie name" required onChange={inputFunction} />
             </div>
             <div>
             <label>Description: </label>
@@ -24,12 +23,13 @@ function AddMovie ({addMovie, handleFunction}) {
             <label> Movie Rate: </label>
             <input type="number" name="rate" placeholder="Enter the movie's rate" required onChange={inputFunction}/>
             </div>
-            
-            
+
             <button type="submit" style={{paddingBottom:20}}
             onClick={e=>{e.preventDefault();addMovie(newMovie); handleFunction()}}>ADD</button>
         </form>
         </div>
     )
 }
+
+
 export default AddMovie;
